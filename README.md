@@ -9,7 +9,12 @@ En un diagrama de clases podemos encontrar los siguientes elementos:
 - Elementos de agrupación: Se utilizan cuando hay que modelar un sistema grande, entonces las clases y sus relaciones se agrupan en paquetes, que a su vez se relacionan entre sí.
 
 ## Clases
-La representación de una clase en UML consiste en una caja con tres compartimentos: nombre, campos y métodos
+La representación de una clase en UML consiste en una caja con tres compartimentos: nombre, campos y métodos.
+- Nombre de la clase
+- Campos
+- Métodos
+
+Se especifica la visibilidad de los miembros de la clase con los símbolos `+
 
 ```mermaid
 classDiagram
