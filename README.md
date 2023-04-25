@@ -11,10 +11,18 @@ En un diagrama de clases podemos encontrar los siguientes elementos:
 ## Clases
 La representación de una clase en UML consiste en una caja con tres compartimentos: nombre, campos y métodos.
 - Nombre de la clase
-- Campos
-- Métodos
+- Campos: se espcifica primero el tipo y luego el nombre
+- Métodos: se especifica el nombre, los paràmetros entre paréntesis, y opcionalmente después de dos puntos el tipo de retorno.
 
-Se especifica la visibilidad de los miembros de la clase con los símbolos `+
+Para describir la visibilidad de los miembros de la clase se deben colocar antes del nombre los siguientes símbolos:
+- `+` Public
+- `-` Private
+- `#` Protected
+- `~` Package
+
+Se pueden incluir los siguientes *clasificadores* añadiendo al final los siguientes símbolos:
+- `*` Abstract
+- `$` Static
 
 ```mermaid
 classDiagram
