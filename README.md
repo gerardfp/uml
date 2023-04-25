@@ -1,6 +1,6 @@
 # Diagramas de clases
 
-En ingeniería de software, un diagrama de clases en el lenguaje de modelado unificado (UML) es un tipo de diagrama de estructura estática que describe la estructura de un sistema al mostrar las clases del sistema, sus atributos, operaciones (o métodos) y las relaciones entre objetos.
+En ingeniería de software, un diagrama de clases en el **Lenguaje de Modelado Unificado (UML)** es un tipo de diagrama de estructura estática que describe la estructura de un sistema al mostrar las clases del sistema, sus atributos, operaciones (o métodos) y las relaciones entre objetos.
 
 En un diagrama de clases podemos encontrar los siguientes elementos:
 - Clases: son abstracciones del dominio del sistema que representan elementos del mismo mediante un estado (campos) y un comportamiento (métodos). Los campos y métodos tienen una visibilidad que determina quién puede acceder a ellos.
