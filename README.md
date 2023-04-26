@@ -24,18 +24,25 @@ Se pueden incluir los siguientes *clasificadores* añadiendo al final los siguie
 - `*` Abstract
 - `$` Static
 
-| Java | UML |
-|-|-|
-|```mermaid
+<table>
+  <tr><th>Java</th><th>UML</th></tr>
+  <tr>
+    <td>
+```mermaid
 classDiagram
   class Nombre {
     +tipo campo
     +metodo()
   }
- ``` |
+```
+    </td>
+    <td>
  ```
  class Nombre {
    public String campo;
    void metodo(){}
  }
- ``` |
+ ```
+    </td>
+  </tr>
+  </table>
