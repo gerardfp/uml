@@ -37,7 +37,7 @@ classDiagram
 </code>
     </td>
     <td>
-<code class="java">
+<code class="language-java">
  class Nombre {
    public String campo;
    void metodo(){}
