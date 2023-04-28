@@ -28,21 +28,21 @@ Se pueden incluir los siguientes *clasificadores* añadiendo al final los siguie
   <tr><th>Java</th><th>UML</th></tr>
   <tr>
     <td>
-```mermaid
+<code class="mermaid">
 classDiagram
   class Nombre {
     +tipo campo
     +metodo()
   }
-```
+</code>
     </td>
     <td>
- ```
+<code class="java">
  class Nombre {
    public String campo;
    void metodo(){}
  }
- ```
+ </code>
     </td>
   </tr>
   </table>
