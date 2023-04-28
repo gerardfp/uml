@@ -1,3 +1,24 @@
+<table>
+  <tr>
+<td>
+
+```java
+class mama {}
+```
+
+</td>
+    <td>
+      <pre lang="mermaid" controls="false">
+      classDiagram
+        class merda {
+          +int ola
+        }
+      </pre>
+    </td>
+  </tr>
+</table>
+  
+
 # Diagramas de clases
 
 En ingeniería de software, un diagrama de clases en el **Lenguaje de Modelado Unificado (UML)** es un tipo de diagrama de estructura estática que describe la estructura de un sistema al mostrar las clases del sistema, sus atributos, operaciones (o métodos) y las relaciones entre objetos.
@@ -24,25 +45,3 @@ Se pueden incluir los siguientes *clasificadores* añadiendo al final los siguie
 - `*` Abstract
 - `$` Static
 
-<table>
-  <tr><th>Java</th><th>UML</th></tr>
-  <tr>
-    <td>
-<code class="mermaid">
-classDiagram
-  class Nombre {
-    +tipo campo
-    +metodo()
-  }
-</code>
-    </td>
-    <td>
-<code class="language-java">
- class Nombre {
-   public String campo;
-   void metodo(){}
- }
- </code>
-    </td>
-  </tr>
-  </table>
