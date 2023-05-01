@@ -23,7 +23,7 @@ Se pueden incluir los siguientes *clasificadores* añadiendo al final los siguie
 - `$` Static
 
 
-  
+Ejemplo:
 
 
 ```java
