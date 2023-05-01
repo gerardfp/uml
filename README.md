@@ -30,7 +30,9 @@ Se pueden incluir los siguientes *clasificadores* añadiendo al final los siguie
 
 ```java
 class Student {
+  static protected String type;
   private String name;
+  List<Float> grades;
   
   public String getName(){ 
     return name;
@@ -47,7 +49,9 @@ class Student {
       <pre lang="mermaid" controls="false">
       classDiagram
         class Student {
-          -String name;
+          #String type$
+          -String name
+          ~List~Float~ grades
           +getName(): String
           +setName(name: String)
         }
