@@ -87,6 +87,27 @@ class Estudiante extends Persona {}
 </tr>
 
 
+<tr>
+<td>
+Realización
+</td>
+<td>
+<pre lang="mermaid">
+classDiagram
+Evaluable <|.. Estudiante
+</pre>
+</td>
+<td>
+
+```java
+interface Evaluable {}
+
+class Estudiante implements Evaluable {}
+```
+
+</td>
+</tr>
+
 
 <tr>
 <td>
@@ -95,17 +116,17 @@ Agregación
 <td>
 <pre lang="mermaid">
 classDiagram
-Grupo *-- Estudiante
+Grupo o-- Estudiante
 </pre>
 </td>
 <td>
 
 ```java
 class Grupo {
-  List<Estudiante> studentList;
+  List<Estudiante> estudiantes;
 }
 
-class Student {}
+class Estudiante {}
 ```
 
 </td>
@@ -115,22 +136,26 @@ class Student {}
 
 <tr>
 <td>
-Agregación
+Composición
 </td>
 <td>
 <pre lang="mermaid">
 classDiagram
-Group *-- Student
+Falta *-- Estudiante
 </pre>
 </td>
 <td>
 
 ```java
-class Group {
-  List<Student> studentList;
+class Estudiante {
+  class Falta {
+    LocalDate fecha;
+    boolean justificada;
+  }
+
+  List<Falta> faltas;
 }
 
-class Student {}
 ```
 
 </td>
