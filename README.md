@@ -43,7 +43,7 @@ class Student {
 ```
 
 </td>
-    <td style="width: 100%">
+    <td width="800px">
       <pre lang="mermaid" controls="false">
       classDiagram
         class Student {
