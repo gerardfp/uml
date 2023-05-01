@@ -145,7 +145,7 @@ Composición<br>
 <td>
 <pre lang="mermaid">
 classDiagram
-Falta *-- Estudiante
+Estudiante *-- Falta
 </pre>
 </td>
 <td>
