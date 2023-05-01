@@ -59,3 +59,80 @@ class Student {
     </td>
   </tr>
 </table>
+
+## Relaciones
+
+UML define diversos tipos de relaciones entre clases. Destacaremos los siguientes:
+
+<table>
+<tr>
+<td>
+Herencia
+</td>
+<td>
+<pre lang="mermaid">
+classDiagram
+Persona <|-- Estudiante
+</pre>
+</td>
+<td>
+
+```java
+class Persona {}
+
+class Estudiante extends Persona {}
+```
+
+</td>
+</tr>
+
+
+
+<tr>
+<td>
+Agregación
+</td>
+<td>
+<pre lang="mermaid">
+classDiagram
+Grupo *-- Estudiante
+</pre>
+</td>
+<td>
+
+```java
+class Grupo {
+  List<Estudiante> studentList;
+}
+
+class Student {}
+```
+
+</td>
+</tr>
+
+
+
+<tr>
+<td>
+Agregación
+</td>
+<td>
+<pre lang="mermaid">
+classDiagram
+Group *-- Student
+</pre>
+</td>
+<td>
+
+```java
+class Group {
+  List<Student> studentList;
+}
+
+class Student {}
+```
+
+</td>
+</tr>
+</table>
