@@ -67,7 +67,8 @@ UML define diversos tipos de relaciones entre clases. Destacaremos los siguiente
 <table>
 <tr>
 <td>
-Herencia
+Herencia<br>
+<em>"es un tipo de"</em>
 </td>
 <td>
 <pre lang="mermaid">
@@ -89,7 +90,8 @@ class Estudiante extends Persona {}
 
 <tr>
 <td>
-Realización
+Realización<br>
+<em>"actua como"</em>
 </td>
 <td>
 <pre lang="mermaid">
@@ -112,6 +114,7 @@ class Estudiante implements Evaluable {}
 <tr>
 <td>
 Agregación
+<em>"tiene"</em>
 </td>
 <td>
 <pre lang="mermaid">
@@ -136,7 +139,8 @@ class Estudiante {}
 
 <tr>
 <td>
-Composición
+Composición<br>
+<em>"es parte de"</em>
 </td>
 <td>
 <pre lang="mermaid">
