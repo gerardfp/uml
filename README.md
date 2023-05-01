@@ -113,7 +113,7 @@ class Estudiante implements Evaluable {}
 
 <tr>
 <td>
-Agregación
+Agregación<br>
 <em>"tiene"</em>
 </td>
 <td>
