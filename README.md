@@ -24,7 +24,7 @@ Se pueden incluir los siguientes *clasificadores* añadiendo al final los siguie
 - `*` Abstract
 - `$` Static
 
-<table style="width: 100%">
+<table>
   <tr>
 <td>
 
@@ -43,7 +43,7 @@ class Student {
 ```
 
 </td>
-    <td>
+    <td style="width: 100%">
       <pre lang="mermaid" controls="false">
       classDiagram
         class Student {
