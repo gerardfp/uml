@@ -22,9 +22,9 @@ Se pueden incluir los siguientes *clasificadores* añadiendo al final los siguie
 - `*` Abstract
 - `$` Static
 
-<table>
-  <tr>
-<td>
+
+  
+
 
 ```java
 class Student {
@@ -42,9 +42,9 @@ class Student {
 }
 ```
 
-</td>
-    <td width="800px">
-      <pre lang="mermaid" controls="false">
+
+
+```mermaid
       classDiagram
         class Student {
           #String type$
@@ -53,10 +53,10 @@ class Student {
           +getName(): String
           +setName(name: String)
         }
-      </pre>
-    </td>
-  </tr>
-</table>
+```
+
+
+
 
 ## Relaciones
 
