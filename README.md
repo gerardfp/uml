@@ -1,4 +1,4 @@
-# Diagramas de clases
+# Diagrama de clases
 
 Describe la estructura de un sistema al mostrar las clases del sistema, su estado (campos) y su comportamiento (métodos), y las relaciones entre ellas.
 
@@ -164,7 +164,7 @@ class Estudiante {
 </tr>
 </table>
 
-# Diagramas de secuencia
+# Diagrama de secuencia
 Representan los mensajes que fluyen en el sistema, quién los envía y quién los recibe, y en qué orden.
 
 En un diagrama de secuencia encontramos:
