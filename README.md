@@ -152,13 +152,22 @@ class Estudiante {
 
 Existen diversos tipos de mensajes:
 
-- An asynchronous Message (messageSort equals asynchCall or asynchSignal) has an open arrow head.
 ```mermaid
 sequenceDiagram
   Estudiante ->> Profesor: Síncrono
-  Estudiante -->> Profesor: Síncrono respuesta
-  Estudiante -x Profesor: Eliminación
-  Estudiante --x Profesor: Eliminación respuesta
+  Estudiante -->> Profesor: Síncrono (respuesta)
+  Estudiante -x Profesor: Eliminación 
+  Estudiante --x Profesor: Eliminación de objeto (respuesta)
   Estudiante -) Profesor: Asíncrono
-  Estudiante --) Profesor: Asíncrono respuesta
+  Estudiante --) Profesor: Creación de objeto
+```
+
+## Activaciones
+
+```mermaid
+sequenceDiagram 
+  Estudiante ->> Profesor: Entregar Trabajo
+  activate Profesor
+  Profesor -->> Alumno: Nota
+  deactivate Profesor
 ```
