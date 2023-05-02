@@ -1,8 +1,3 @@
-<pre lang="mermaid" style="background: blue">
-classDiagram
-Grupo o-- Estudiante
-</pre>
-
 # Diagrama de clases
 
 Describe la estructura de un sistema al mostrar las clases del sistema, su estado (campos) y su comportamiento (métodos), y las relaciones entre ellas.
@@ -126,7 +121,16 @@ En un diagrama de secuencia encontramos:
 ## Lineas de vida
 ```mermaid
 sequenceDiagram
-    participant Alice
-    participant Bob
+    participant Estudiante
+    participant Profesor
+```
+
+## Mensajes
+```mermaid
+sequenceDiagram
+   participant Estudiante
+   participant Profesor
+   Estudiante->>Profesor: Trabajo
+   Profesor->>Estdiante: Nota
 ```
 
