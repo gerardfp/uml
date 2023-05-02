@@ -25,6 +25,17 @@ Se pueden incluir los siguientes *clasificadores* añadiendo al final los siguie
 
 Ejemplo:
 
+```mermaid
+      classDiagram
+        class Estudiante {
+          #String tipo$
+          -String nombre
+          ~List~Float~ notas
+          +getNombre(): String
+          +setNombre(nombre: String)
+        }
+```
+
 ```java
 class Estudiante {
     static protected String tipo;
@@ -41,16 +52,7 @@ class Estudiante {
 }
 ```
 
-```mermaid
-      classDiagram
-        class Estudiante {
-          #String tipo$
-          -String nombre
-          ~List~Float~ notas
-          +getNombre(): String
-          +setNombre(nombre: String)
-        }
-```
+
 
 ## Relaciones
 
