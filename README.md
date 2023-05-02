@@ -27,17 +27,17 @@ Ejemplo:
 
 ```java
 class Student {
-  static protected String type;
-  private String name;
-  List<Float> grades;
+    static protected String type;
+    private String name;
+    List<Float> grades;
   
-  public String getName(){ 
-    return name;
-  }
+    public String getName(){ 
+        return name;
+    }
   
-  public void setName(String name){
-    this.name = name;
-  }
+    public void setName(String name){
+        this.name = name;
+    }
 }
 ```
 
@@ -87,7 +87,7 @@ Grupo o-- Estudiante
 ```
 ```java
 class Grupo {
-  List<Estudiante> estudiantes;
+    List<Estudiante> estudiantes;
 }
 
 class Estudiante {}
@@ -101,12 +101,12 @@ Estudiante *-- Falta
 ```
 ```java
 class Estudiante {
-  class Falta {
-    LocalDate fecha;
-    boolean justificada;
-  }
+    class Falta {
+        LocalDate fecha;
+        boolean justificada;
+    }
 
-  List<Falta> faltas;
+    List<Falta> faltas;
 }
 ```
 
@@ -138,15 +138,15 @@ sequenceDiagram
 ```
 ```java
 class Profesor {
-  static float entregarTrabajo(String trabajo) {
-    return new Random().nextFloat(10);
-  }
+    static float entregarTrabajo(String trabajo) {
+        return new Random().nextFloat(10);
+    }
 }
 
 class Estudiante {
-  static void hacerTodoLoPosibleParaAprobar(){
-    float nota = Profesor.entregarTrabajo("sequenceDiagram");
-  }
+    static void hacerTodoLoPosibleParaAprobar(){
+        float nota = Profesor.entregarTrabajo("sequenceDiagram");
+    }
 }
 ```
 
