@@ -176,7 +176,7 @@ sequenceDiagram
 
 # Diagrama de actividades
 
-_Flowchart_
+También llamado diagrama de flujo (_Flowchart_). Representa una serie de acciones en un sistema.
 
 Actividades, transiciones, decisiones y combinaciones
 
