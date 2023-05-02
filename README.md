@@ -168,6 +168,6 @@ sequenceDiagram
 sequenceDiagram 
   Estudiante ->> Profesor: Entregar Trabajo
   activate Profesor
-  Profesor -->> Alumno: Nota
+  Profesor -->> Estudiante: Nota
   deactivate Profesor
 ```
