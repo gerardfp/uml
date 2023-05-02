@@ -119,6 +119,8 @@ En un diagrama de secuencia encontramos:
 - Activaciones: representan el tiempo que necesita un participante para completar una tarea.
 
 ## Lineas de vida
+Los participantes se colocan en cajas. La línea vertical indica el paso del tiempo hacia abajo.
+
 ```mermaid
 sequenceDiagram
     participant Estudiante
@@ -127,7 +129,7 @@ sequenceDiagram
 
 ## Mensajes
 Los mensajes suelen ser las llamadas a métodos y los retornos (aunque tambień pueden ser llamadas a APIs u otros tipos de paso de mensajes).
-Existen
+
 
 ```mermaid
 sequenceDiagram
@@ -146,4 +148,17 @@ class Estudiante {
     float nota = Profesor.entregarTrabajo("sequenceDiagram");
   }
 }
+```
+
+Existen diversos tipos de mensajes:
+
+- An asynchronous Message (messageSort equals asynchCall or asynchSignal) has an open arrow head.
+```mermaid
+sequenceDiagram
+  Estudiante ->> Profesor: Síncrono
+  Estudiante -->> Profesor: Síncrono respuesta
+  Estudiante -x Profesor: Eliminación
+  Estudiante --x Profesor: Eliminación respuesta
+  Estudiante -) Profesor: Asíncrono
+  Estudiante --) Profesor: Asíncrono respuesta
 ```
