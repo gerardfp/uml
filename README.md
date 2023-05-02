@@ -171,3 +171,13 @@ sequenceDiagram
   Profesor -->> Estudiante: Nota
   deactivate Profesor
 ```
+
+# Diagrama de actividades
+
+_Flowchart_
+
+Actividades, transiciones, decisiones y combinaciones
+
+# Diagrama de estados
+
+Estados, eventos, señales, transiciones.
