@@ -128,9 +128,7 @@ sequenceDiagram
 ## Mensajes
 ```mermaid
 sequenceDiagram
-   participant Estudiante
-   participant Profesor
    Estudiante->>Profesor: Trabajo
-   Profesor->>Estdiante: Nota
+   Profesor->>Estudiante: Nota
 ```
 
