@@ -140,7 +140,8 @@ class Profesor {
     return new Random().nextFloat(10);
   }
 }
-class Alumno {
+
+class Estudiante {
   static void hacerTodoLoPosibleParaAprobar(){
     float nota = Profesor.entregarTrabajo("sequenceDiagram");
   }
