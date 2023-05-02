@@ -126,9 +126,23 @@ sequenceDiagram
 ```
 
 ## Mensajes
+Los mensajes suelen ser las llamadas a métodos y los retornos (aunque tambień pueden ser llamadas a APIs u otros tipos de paso de mensajes).
+Existen
+
 ```mermaid
 sequenceDiagram
-   Estudiante->>Profesor: Trabajo
+   Estudiante->>Profesor: Entregar Trabajo
    Profesor->>Estudiante: Nota
 ```
-
+```java
+class Profesor {
+  static float entregarTrabajo(String trabajo) {
+    return new Random().nextFloat(10);
+  }
+}
+class Alumno {
+  static void hacerTodoLoPosibleParaAprobar(){
+    float nota = Profesor.entregarTrabajo("sequenceDiagram");
+  }
+}
+```
