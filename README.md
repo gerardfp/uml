@@ -26,29 +26,29 @@ Se pueden incluir los siguientes *clasificadores* añadiendo al final los siguie
 Ejemplo:
 
 ```java
-class Student {
-    static protected String type;
-    private String name;
-    List<Float> grades;
+class Estudiante {
+    static protected String tipo;
+    private String nombre;
+    List<Float> notas;
   
-    public String getName(){ 
-        return name;
+    public String getNombre(){ 
+        return nombre;
     }
   
-    public void setName(String name){
-        this.name = name;
+    public void setNombre(String nombre){
+        this.nombre = nombre;
     }
 }
 ```
 
 ```mermaid
       classDiagram
-        class Student {
-          #String type$
-          -String name
-          ~List~Float~ grades
-          +getName(): String
-          +setName(name: String)
+        class Estudiante {
+          #String tipo$
+          -String nombre
+          ~List~Float~ notas
+          +getNombre(): String
+          +setNombre(nombre: String)
         }
 ```
 
