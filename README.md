@@ -185,15 +185,53 @@ En un diagrama de actividades encontramos:
 - Decisiones: representan una condicion que determina la siguiente tarea a realizar entre varias posibilidades
 - Combinaciones: permite que se inicien varias tareas a continuación de una tarea (divergencia), o que una tarea se inicia después de finalizar varias tareas (convergencia)
 
-# Actividades
+## Actividades
 
 Se representan con una caja con el nombre de la actividad dentro
 
 ```mermaid
-flowchart LR
-  id1[Estudiar UML]
-  id2[Ver la televisión]
+stateDiagram-v2
+  A: Estudiar UML
+  B: Ver la televisión
 ```
+
+## Transiciones
+
+Se representan con una flecha que une una actividad con la siguiente
+
+```mermaid
+stateDiagram-v2
+    A: Estudiar UML
+    B: Ver la televisión
+    A --> B
+```    
+
+## Decisiones
+
+Se representan con un rombo con la descripción de la condición. De él salen varias flechas hacia las siguientes actividades, y en cada flecha se indica el resultado de la condición.
+
+```mermaid
+stateDiagram-v2
+    A: Estudiar UML
+    B: Ver la televisión
+    C: Descansar un poco
+    state Comprendo UML? as D <<choice>>
+    A --> D
+    D --> B: Si
+    D --> C: No
+    D --> A
+```    
+
+```mermaid
+flowchart
+    A[Estudiar UML] --> B{Comprendo UML?}
+    B -->|Si| C[Ver la televisión]
+    B -->|No| D[Descansar un poco]
+    D --> A
+```
+
+## Combinaciones
+
 
 # Diagrama de estados
 
