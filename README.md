@@ -1,10 +1,10 @@
 # Diagrama de clases
 
-Describe la estructura de un sistema al mostrar las clases del sistema, su estado (campos) y su comportamiento (métodos), y las relaciones entre ellas.
+Representa las clases del sistema y las relaciones entre ellas.
 
 En un diagrama de clases podemos encontrar los siguientes elementos:
 - Clases: son abstracciones del dominio del sistema que representan elementos del mismo mediante un estado (campos) y un comportamiento (métodos). Los campos y métodos tienen una visibilidad que determina quién puede acceder a ellos.
-- Relaciones: en el diagrama representan relaciones reales entre los elementos del sistema a los que hacen referencia las clases. Pueden ser de herencia, composición y agragación (entre otras).
+- Relaciones: pueden ser de herencia, composición y agragación (entre otras).
 
 ## Clases
 La representación de una clase en UML consiste en una caja con tres compartimentos: nombre, campos y métodos.
@@ -178,7 +178,22 @@ sequenceDiagram
 
 También llamado diagrama de flujo (_Flowchart_). Representa una serie de acciones en un sistema.
 
-Actividades, transiciones, decisiones y combinaciones
+En un diagrama de actividades encontramos:
+
+- Actividades: son tareas que se realizan en el sistema
+- Transiciones: conectan una tarea con la siguiente tarea a realizar
+- Decisiones: representan una condicion que determina la siguiente tarea a realizar entre varias posibilidades
+- Combinaciones: permite que se inicien varias tareas a continuación de una tarea (divergencia), o que una tarea se inicia después de finalizar varias tareas (convergencia)
+
+# Actividades
+
+Se representan con una caja con el nombre de la actividad dentro
+
+```mermaid
+flowchart LR
+  id1[Estudiar UML]
+  id2[Ver la televisión]
+```
 
 # Diagrama de estados
 
