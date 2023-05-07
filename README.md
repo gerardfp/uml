@@ -211,18 +211,6 @@ stateDiagram-v2
 Se representan con un rombo con la descripción de la condición. De él salen varias flechas hacia las siguientes actividades, y en cada flecha se indica el resultado de la condición.
 
 ```mermaid
-stateDiagram-v2
-    A: Estudiar UML
-    B: Ver la televisión
-    C: Descansar un poco
-    state Comprendo UML? as D <<choice>>
-    A --> D
-    D --> B: Si
-    D --> C: No
-    D --> A
-```    
-
-```mermaid
 flowchart
     A[Estudiar UML] --> B{Comprendo UML?}
     B -->|Si| C[Ver la televisión]
@@ -231,6 +219,24 @@ flowchart
 ```
 
 ## Combinaciones
+
+Se representan con una barra de color negro. De una barra de divergencia (_fork_) salen varias flechas. A un barra de convergencia (_join_) entran varias flechas.
+
+```mermaid
+stateDiagram-v2
+    state fork_state <<fork>>
+    state join_state <<join>>
+    state "Aprender programación" as state1
+    state "Aprender UML" as state2
+    state "Matricularse en DAM" as stateI
+    state "Triunfar en la vida" as stateF
+      stateI --> fork_state
+      fork_state --> state1
+      fork_state --> state2
+      state1 --> join_state
+      state2 --> join_state
+      join_state --> stateF
+```
 
 
 # Diagrama de estados
