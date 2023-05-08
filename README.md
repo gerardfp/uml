@@ -160,10 +160,7 @@ Existen diversos tipos de mensajes:
 sequenceDiagram
   Estudiante ->> Profesor: Síncrono
   Estudiante -->> Profesor: Síncrono (respuesta)
-  Estudiante -x Profesor: Eliminación 
-  Estudiante --x Profesor: Eliminación de objeto (respuesta)
   Estudiante -) Profesor: Asíncrono
-  Estudiante --) Profesor: Creación de objeto
 ```
 
 ## Activaciones
