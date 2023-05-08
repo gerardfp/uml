@@ -241,3 +241,13 @@ stateDiagram-v2
 # Diagrama de estados
 
 Estados, eventos, señales, transiciones.
+```mermaid
+stateDiagram-v2
+    state "No matriculado" as nomatriculado
+    state "Matriculado" as matriculado
+    state "Graduado" as graduado
+    [*] --> nomatriculado
+    nomatriculado --> matriculado
+    matriculado --> graduado
+    graduado --> [*]
+```
