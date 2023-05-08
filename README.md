@@ -247,7 +247,7 @@ stateDiagram-v2
     state "Matriculado" as matriculado
     state "Graduado" as graduado
     [*] --> nomatriculado
-    nomatriculado --> matriculado
-    matriculado --> graduado
+    nomatriculado --> matriculado: formaliza matricula
+    matriculado --> graduado: aprueba todo
     graduado --> [*]
 ```
