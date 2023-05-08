@@ -73,7 +73,9 @@ class Estudiante extends Persona {}
 _"actua como"_
 ```mermaid
 classDiagram
-Evaluable <|.. Estudiante
+class Evaluable
+<<interface>> Evaluable
+Evaluable  <|.. Estudiante
 ```
 ```java
 interface Evaluable {}
