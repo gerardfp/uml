@@ -303,7 +303,7 @@ class Estudiante {
       if (estado == 1) {
             estado = 2;
       } else {
-            throw new RuntimeException("Transicion no permitida: No se puede graduar porque no esta matriculado");
+            throw new RuntimeException("Transicion no permitida: No se puede graduar porque no esta matriculado o ya está graduado");
       }
    }
 }
