@@ -273,6 +273,7 @@ class Estudiante {
 ```
 
 ## Transiciones
+Representan los posibles cambios de un estado a otro.
 
 ```mermaid
 stateDiagram-v2
@@ -280,7 +281,30 @@ stateDiagram-v2
     state "Matriculado" as matriculado
     state "Graduado" as graduado
     [*] --> nomatriculado
-    nomatriculado --> matriculado: formaliza matricula
-    matriculado --> graduado: aprueba todo
+    nomatriculado --> matriculado
+    matriculado --> graduado
     graduado --> [*]
+```
+
+Estas posibilidades, de nuevo, se podrian programar de infinitas maneras:
+```java
+class Estudiante {
+   int estado = 0;    // 0==no matriculado,  1==matriculado,  2==graduado
+   
+   void matricular() {
+      if (estado == 0) {
+            estado = 1;
+      } else {
+            throw new RuntimeException("Transicion no permitida: El estudiante ya se matriculó o graduó  previamente");
+      }
+   }
+   
+   void graduar() {
+      if (estado == 1) {
+            estado = 2;
+      } else {
+            throw new RuntimeException("Transicion no permitida: No se puede graduar porque no esta matriculado");
+      }
+   }
+}
 ```
