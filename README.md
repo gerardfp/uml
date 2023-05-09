@@ -240,7 +240,40 @@ stateDiagram-v2
 
 # Diagrama de estados
 
-Estados, eventos, señales, transiciones.
+Representa los posibles estados de un sistema y los cambios permitidos de un estado a otro. 
+
+Encontramos:
+- Estados: se refiere al valor de una variable o una combinación de valores.
+- Transiciones: son los cambios de estado permitidos
+- Eventos: son las acciones que propician un cambio de estado
+
+## Estados
+Se representan mediante una caja con el nombre del estado dentro.
+
+```mermaid
+stateDiagram-v2
+    state "No matriculado" as nomatriculado
+    state "Matriculado" as matriculado
+    state "Graduado" as graduado
+```
+Los estados corresponden a determinados valores de las variables. Los estados anteriores se podrían programar de infinitas formas:
+```java
+class Estudiante {
+   boolean matriculado;
+   boolean graduado;
+}
+
+class Estudiante {
+   int estado;   // 0==no matriculado,  1==matriculado,  2==graduado
+}
+
+class Estudiante {
+   float[] notas;   // si notas.length == 0: no matriculado,  si notas.length > 0 matriculado,  si todas las notas > 5  graduado
+}
+```
+
+## Transiciones
+
 ```mermaid
 stateDiagram-v2
     state "No matriculado" as nomatriculado
