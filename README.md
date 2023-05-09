@@ -268,7 +268,7 @@ class Estudiante {
 }
 
 class Estudiante {
-   float[] notas;   // si notas.length == 0: no matriculado,  si notas.length > 0 matriculado,  si todas las notas > 5  graduado
+   float[] notas;   // Si notas == null: no matriculado. Si notas.length > 0 matriculado. Si todas > 5:  graduado
 }
 ```
 
