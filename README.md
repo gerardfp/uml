@@ -273,7 +273,7 @@ class Estudiante {
 ```
 
 ## Transiciones
-Representan los posibles cambios de un estado a otro.
+Representan los posibles cambios de un estado a otro. Se represetan con flechas entre estados:
 
 ```mermaid
 stateDiagram-v2
@@ -306,5 +306,58 @@ class Estudiante {
             throw new RuntimeException("Transicion no permitida: No se puede graduar porque no esta matriculado o ya está graduado");
       }
    }
+}
+```
+## Eventos
+Son las acciones que propician un cambio de estado. Se representan con un texto encima de las flechas.
+
+```mermaid
+stateDiagram-v2
+    state "No matriculado" as nomatriculado
+    state "Matriculado" as matriculado
+    state "Graduado" as graduado
+    [*] --> nomatriculado
+    nomatriculado --> matriculado: formalizar matricula
+    matriculado --> graduado: aprobar todo
+    graduado --> [*]
+```
+
+```java
+class Estudiante {
+    float[] notas;
+
+    String obtenerEstado(){
+        if (notas == null) return "No matriculado";
+        for (Float nota : notas) if (nota < 5) return "Matriculado";
+        return "Graduado";
+    }
+    
+    void aprobar(int modulo, float nota){
+        if (notas == null) return;
+        notas[modulo] = nota;
+    }
+
+    void formalizarMatricula(){
+        if (notas == null) {
+            notas = new float[3];  // 3 modulos
+        } else { /*...*/ }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Estudiante estudiante = new Estudiante();
+
+        estudiante.aprobar(0, 7.8f); // error: estado == "no-matriculado"
+        System.out.println(estudiante.obtenerEstado());  // no-matriculado
+        estudiante.formalizarMatricula();
+        System.out.println(estudiante.obtenerEstado());  // matriculado
+        estudiante.aprobar(1, 8.9f);
+        System.out.println(estudiante.obtenerEstado());  // matriculado
+        estudiante.aprobar(2, 9.2f);
+        System.out.println(estudiante.obtenerEstado());  // matriculado
+        estudiante.aprobar(0, 7.8f);
+        System.out.println(estudiante.obtenerEstado());  // graduado
+    }
 }
 ```
