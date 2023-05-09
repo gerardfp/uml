@@ -203,7 +203,15 @@ stateDiagram-v2
     A: Estudiar UML
     B: Ver la televisión
     A --> B
-```    
+```
+
+Seguramente las tareas sean métodos de un programa:
+```java
+class Estudiante {
+      void estudiarUML() { /*...*/ }
+      void verLaTelevision { /*...*/ }
+}
+```
 
 ## Decisiones
 
@@ -215,6 +223,26 @@ flowchart
     B -->|Si| C[Ver la televisión]
     B -->|No| D[Descansar un poco]
     D --> A
+```
+
+Las decisiones serán habitualmente sentencias `if` o `switch`:
+
+```java
+class Estudiante {
+      int nivelUML;
+      
+      boolean comprendoUML {
+            return nivelUML > 5;
+      }
+      
+      void estudiarUML {
+            if (comprendoUML()) {
+                  verLaTelevisión();
+            } else {
+                  estudiarUML();
+            }
+      }
+}
 ```
 
 ## Combinaciones
