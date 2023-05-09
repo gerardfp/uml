@@ -236,12 +236,18 @@ class Estudiante {
       }
       
       void estudiarUML {
+            nivelUML++;
+            
             if (comprendoUML()) {
                   verLaTelevisión();
             } else {
+                  descansarUnPoco();
                   estudiarUML();
             }
       }
+      
+      void verLaTelevision() { /***/ }
+      void descansarUnPoco() { /***/ }
 }
 ```
 
